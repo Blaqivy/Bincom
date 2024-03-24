@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito", sans-serif;
+}
+.container {
+  background: #333;
+  padding: 20px 0px;
+  /* position: fixed;
+  width: 100%;
+  z-index: 1; */
+}
+.links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 20px;
+}
+.links li a {
+  color: #fff;
+  text-decoration: none;
+}
+.toggle {
+  display: none;
+}
+@media only screen and (max-width: 800px) {
+  .links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px;
+    display: none;
+    z-index: 1;
+  }
+  .links .show {
+    display: flex;
+    padding: 10px 20px;
+  }
+  .links a {
+    font-size: 16px;
+  }
+  .links li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .toggle {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: transparent;
+    border: transparent;
+    margin-right: 30px;
+  }
+}
+.header {
+  width: 100%; /* Set the width of the slider */
+  height: auto; /* Set the height of the slider container */
+  overflow: hidden; /* Hide overflowing content */
+  position: relative; /* Set position to relative */
+}
+.carousel {
+  display: flex; /* Display slides in a row */
+  transition: transform 0.5s ease; /* Smooth transition */
+}
+.frame {
+  flex: 0 0 auto; /* Prevent item from growing */
+  width: 100%; /* Set width of each slide */
+  height: 100%; /* Set height of each slide */
+  overflow: hidden; /* Hide overflowing content */
+}
+.frame img {
+  width: 100%; /* Make images fill the slide */
+  height: 500px; /* Maintain aspect ratio */
+  object-fit: contain; /* Cover entire slide */
+}
+#about {
+  padding: 30px 50px;
+  background: whitesmoke;
+}
+#about h2 {
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 50px;
+}
+@keyframes slideInFromDown {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animated {
+  animation: slideInFromDown 1s ease-in-out;
+}
+#contact {
+  background-color: #333;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+#contact p {
+  color: #fff;
+  font-size: 16px;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.info-icon {
+  display: flex;
+  align-items: center;
+}
+.info-icon i {
+  font-size: 20px;
+  color: #fff;
+}
+.info-icon a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .info p {
+    margin-bottom: 0px;
+  }
+  .copyright {
+    padding: 0px 10px;
+  }
+}
