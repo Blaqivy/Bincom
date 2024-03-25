@@ -7,7 +7,7 @@ let carousel = document.querySelector('.carousel');
   setInterval(() => {
     index = (index + 1) % totalSlides;
     carousel.style.transform = `translateX(${-index * 100}%)`;
-  }, 3000); // Change slide every 3 seconds
+  }, 3000); 
   const date = document.querySelector(".date");
 date.innerHTML = new Date().getFullYear();
 
